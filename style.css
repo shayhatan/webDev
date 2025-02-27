@@ -1,0 +1,255 @@
+:root {
+    --background-light: #e0d1f7;
+    --primary-color: #5e3c8c;
+    --text-dark: #333333;
+    --button-hover: #4b2d7d;
+    --link-color: #5e3c8c;
+    --border-light: #d1b0d9;
+    --shadow-light: rgba(0, 0, 0, 0.15);
+    --section-bg: #ffffff;
+    --footer-bg: #4b2d7d;
+    --footer-text: #f0e6f7;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    direction: rtl;
+    text-align: right;
+    background: var(--background-light);
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 12px;
+}
+
+nav {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 12px 18px;
+    display: inline-block;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--button-hover);
+    transform: scale(1.05);
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: var(--section-bg);
+    padding: 30px;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    border-radius: 12px;
+    font-size: 18px;
+    line-height: 1.8;
+    border: 1px solid var(--border-light);
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* כפתור */
+.button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.button img {
+    width: 24px; /* גודל התמונה */
+    height: 24px; /* גובה התמונה */
+    border-radius: 50%; /* עיגול התמונה */
+    margin-left: 8px; /* רווח בין התמונה לטקסט */
+    object-fit: cover; /* מוודא שהתמונה לא תצא מגבולות העיגול */
+    display: inline-block;
+    vertical-align: middle; /* מוודא שהתמונה תהיה במרכז ביחס לטקסט */
+}
+
+/* כפתור hover */
+.button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+}
+
+/* גלריית פרויקטים */
+#exampleLinks {
+    background-color: #f2e6ff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 12px var(--shadow-light);
+    margin-top: 20px;
+    display: none;
+    border: 1px solid var(--primary-color);
+}
+
+#exampleLinks.show {
+    display: block;
+}
+
+#exampleLinks ul {
+    list-style: none;
+    padding: 0;
+}
+
+#exampleLinks li {
+    margin: 15px 0;
+}
+
+#exampleLinks a {
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center; /* מיישר את התמונה והטקסט באופן אנכי */
+    justify-content: flex-start; /* מוודא שהתמונה תהיה בצד ימין */
+    padding: 14px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#exampleLinks a img {
+    margin-right: 5px; /* רווח בין התמונה לטקסט */
+    order: -1; /* מוודא שהתמונה תופיע לפני הטקסט */
+}
+
+#exampleLinks a:hover {
+    background-color: var(--button-hover);
+}
+
+/* תכונות למרכז את הטקסט */
+#exampleLinks a .text-container {
+    text-align: center; /* ממרכז את הטקסט */
+    flex-grow: 1; /* מאפשר לטקסט למלא את החלל */
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.project-thumbnail {
+    width: 60px;  /* גודל קטן יותר */
+    height: 60px;     /* גובה קטן יותר */
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px var(--shadow-light);
+    margin-left: 10px; /* רווח בין התמונה לטקסט */
+    order: 2; /* מוודא שהתמונה תישאר בצד ימין */
+}
+
+.project-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.project-gallery ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-gallery li {
+    margin-bottom: 20px;
+}
+
+.service-image {
+    width: 100%;
+    max-width: 150px;  /* גודל אחיד לכל התמונות */
+    height: auto;     /* שומר על יחס גובה-רוחב */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-light);
+    object-fit: cover; /* שומר שהתמונה תתמלא במלואה */
+    margin: 0 auto;
+    display: block;
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* כרטיסי שירות */
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 22px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+

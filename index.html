@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פתרונות דיגיטליים בהתאמה אישית</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <h1>פתרונות דיגיטליים בהתאמה אישית</h1>
+            <p>בניית אתרים שמייצרים תוצאות</p>
+        </div>
+    </header>
+
+    <nav id="navMenu">
+        <a href="index.html"><i class="fas fa-home"></i> בית</a>
+        <a href="services.html"><i class="fas fa-cogs"></i> שירותים</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> צור קשר</a>
+    </nav>
+
+    <div class="container">
+        <h2>עלינו</h2>
+        <p>ברוכים הבאים לחברה שמובילה את עולם הדיגיטל והחדשנות. אנו מציעים שירותי בניית אתרים מתקדמים, בהתאמה מלאה לצרכים שלכם - משלב האפיון ועד ההשקה והקידום.</p>
+
+        <h2>תיק עבודות</h2>
+        <p>אנחנו גאים להציג בפניכם מספר פרויקטים נבחרים, שמדגימים את היכולת שלנו לקחת כל רעיון ולהפוך אותו לנכס דיגיטלי מנצח.</p>
+
+        <button class="button" id="toggleButton">
+            <span>צפו בדוגמאות לפרויקטים נבחרים</span>
+        </button>
+
+        <div id="exampleLinks" class="project-gallery">
+            <ul>
+                <li>
+                    <a href="example1.html" target="_blank">
+                        <div class="text-container">
+                            <span>דוגמה 1 - פלטפורמת לימוד קריפטו אישי</span>
+                        </div>
+                        <img class="project-thumbnail" src="crypto.jpg" alt="קורס קריפטו">
+                    </a>
+                </li>
+                <li>
+                    <a href="example2.html" target="_blank">
+                        <div class="text-container">
+                            <span>דוגמה 2 - קורס בניית ציפורניים מקצועי</span>
+                        </div>
+                        <img class="project-thumbnail" src="nail.jpg" alt="קורס ציפורניים">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        כל הזכויות שמורות &copy; 2025 | פתרונות דיגיטליים בהתאמה אישית
+    </footer>
+
+    <script>
+        document.getElementById('toggleButton').addEventListener('click', function() {
+            const exampleDiv = document.getElementById('exampleLinks');
+            exampleDiv.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
